@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url> <loc>https://baas.skillz.io/help</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://baas.skillz.io/en/help" /> </url>
-<url> <loc>https://baas.skillz.io/index</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://baas.skillz.io/en/index" /> </url>
-<url> <loc>https://baas.skillz.io/users</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://baas.skillz.io/en/users" /> </url>
-<url> <loc>https://baas.skillz.io/blog/2017/10/24/new-version-1.0.0</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
-<url> <loc>https://baas.skillz.io/blog/2017/09/26/adding-rss</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
-<url> <loc>https://baas.skillz.io/blog/2017/09/25/testing-rss</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
-<url> <loc>https://baas.skillz.io/blog/2017/04/10/blog-post-two</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
-<url> <loc>https://baas.skillz.io/blog/2016/03/11/blog-post</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
-<url> <loc>https://baas.skillz.io/docs/api</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://baas.skillz.io/docs/api" /> </url>
-<url> <loc>https://baas.skillz.io/docs/consortium</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://baas.skillz.io/docs/consortium" /> </url>
-<url> <loc>https://baas.skillz.io/docs/doc5</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://baas.skillz.io/docs/doc5" /> </url>
-<url> <loc>https://baas.skillz.io/docs/global_understanding</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://baas.skillz.io/docs/global_understanding" /> </url>
-<url> <loc>https://baas.skillz.io/docs/node</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://baas.skillz.io/docs/node" /> </url>
+<url> <loc>https://baas.skillz.io/baas_docs/help</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://baas.skillz.io/baas_docs/en/help" /> </url>
+<url> <loc>https://baas.skillz.io/baas_docs/index</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://baas.skillz.io/baas_docs/en/index" /> </url>
+<url> <loc>https://baas.skillz.io/baas_docs/users</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://baas.skillz.io/baas_docs/en/users" /> </url>
+<url> <loc>https://baas.skillz.io/baas_docs/blog/2017/10/24/new-version-1.0.0</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://baas.skillz.io/baas_docs/blog/2017/09/26/adding-rss</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://baas.skillz.io/baas_docs/blog/2017/09/25/testing-rss</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://baas.skillz.io/baas_docs/blog/2017/04/10/blog-post-two</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://baas.skillz.io/baas_docs/blog/2016/03/11/blog-post</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://baas.skillz.io/baas_docs/docs/api</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://baas.skillz.io/baas_docs/docs/api" /> </url>
+<url> <loc>https://baas.skillz.io/baas_docs/docs/consortium</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://baas.skillz.io/baas_docs/docs/consortium" /> </url>
+<url> <loc>https://baas.skillz.io/baas_docs/docs/doc5</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://baas.skillz.io/baas_docs/docs/doc5" /> </url>
+<url> <loc>https://baas.skillz.io/baas_docs/docs/global_understanding</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://baas.skillz.io/baas_docs/docs/global_understanding" /> </url>
+<url> <loc>https://baas.skillz.io/baas_docs/docs/node</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://baas.skillz.io/baas_docs/docs/node" /> </url>
 </urlset>
