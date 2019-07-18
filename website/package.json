@@ -1,9 +1,9 @@
 {
+  "homepage": "https://skillz-blockchain.github.io/baas_docs/",
   "scripts": {
     "examples": "docusaurus-examples",
     "start": "docusaurus-start",
     "build": "docusaurus-build",
-    "deploy":  "gh-pages -d build",
     "publish-gh-pages": "docusaurus-publish",
     "write-translations": "docusaurus-write-translations",
     "version": "docusaurus-version",
@@ -11,8 +11,5 @@
   },
   "devDependencies": {
     "docusaurus": "^1.11.1"
-  },
-  "dependencies": {
-    "gh-pages": "^2.0.1"
   }
 }

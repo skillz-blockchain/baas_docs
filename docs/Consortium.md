@@ -16,7 +16,7 @@ Once you created it, you can rename it as ou wish by clicking on its name.
 
 You can invite someone to your consortium by searching its mail into the left search bar.
 
-![Inviting people](/img/consortium_invite.png)
+![Inviting people](/baas_docs/img/consortium_invite.png)
 
 Once invited, the person has full access to the consortium, and can invite people too.
 He will have the possibility to add a node to this consortium and then read/write onto the blockchain.
