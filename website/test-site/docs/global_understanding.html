@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Global understanding · BaaS Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;BaaS aims at creating a consortium between people who will share a blockchain.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Global understanding · BaaS Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://baas.skillz.io/"/><meta property="og:description" content="&lt;p&gt;BaaS aims at creating a consortium between people who will share a blockchain.&lt;/p&gt;
+"/><meta property="og:image" content="https://baas.skillz.io/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://baas.skillz.io/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/baas.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/baas.png" alt="BaaS Documentation"/><h2 class="headerTitleWithLogo">BaaS Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive siteNavItemActive"><a href="/docs/global_understanding" target="_self">Docs</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Global understanding</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Global understanding</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/docs/global_understanding">Global understanding</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">How it works</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/consortium">Consortium</a></li><li class="navListItem"><a class="navItem" href="/docs/node">Node</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Global understanding</h1></header><article><div><span><p>BaaS aims at creating a consortium between people who will share a blockchain.
+It helps people setting up a blockchain in a few clicks and connect them through a SaaS platform.
+Once a consortium and a blockchain is created, the blockchain acts like a normal blockchain connected with the people of your consortium.</p>
+<h2><a class="anchor" aria-hidden="true" id="consortium"></a><a href="#consortium" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Consortium</h2>
+<p>A consortium is a group of people. They can invite other people in this consortium by searching their email.
+Being in a consortium allows you to add a <em>Node</em> to it.
+Adding a node to a consortium will enable you to interact with the blockchain and access a <em>Blockchain Explorer</em>.</p>
+<p>Everybody in the consortium can invite new people to join the group.</p>
+<h2><a class="anchor" aria-hidden="true" id="node"></a><a href="#node" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Node</h2>
+<p>The <em>Node</em> is the entity that will run on your machine in order to connect to a consortium.
+It hosts a blockchain node and a service that allows you to control your node directly from the platform.
+The blockchain node is not started until you join a consortium.
+When you join a consortium, it will connect to already participating people and launch its own node so you can interact with the blockchain.</p>
+<p>The <em>Node</em> is running in a Docker container, so you will need this dependency on your machine in order to be able to run it.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/docs/consortium"><span>Consortium</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#consortium">Consortium</a></li><li><a href="#node">Node</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/baas.png" alt="BaaS Documentation" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/global_understanding.html">Getting Started (or other categories)</a></div><div><h5>Community</h5><a href="https://youtu.be/U4z3r5-s5xc">Youtube</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/skillz-blockchain">GitHub</a></div></section><section class="copyright">Copyright © 2019 SkillZ</section></footer></div></body></html>
