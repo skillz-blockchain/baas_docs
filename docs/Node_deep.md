@@ -10,28 +10,28 @@ title: Node
 
 The Node is a package that contain two sub-entities:
 - A blockchain node
-- A NodeJS server that allow it to be interactive
+- A NodeJS server that allows it to be interactive
 
-The package is bundle thanks to docker. it contains all dependencies required for every supported protocol by SkillZ.
+The package is bundled thanks to docker. It contains all dependencies required for every supported protocol by SkillZ.
 So it is able to deploy any kind of blockchain supported by SkillZ [_link_](GlobalUnderstanding.md#supported-protocol).
 
-The Node require Docker and that required TCP ports are open [_here for detailed_](Node.md#launching-your-node).
+The Node requires Docker and open TCP ports [_here for detailed_](Node.md#launching-your-node).
 
-## Node api
+## Node API
 
-The Node has multiple routes which allows SkillZ server to give him several indications seen before in [server](Server.md)<br>
+The Node has multiple routes which allow SkillZ server to give him several indications seen before in [server](Server.md)<br>
 The Node disables specific routes depending on the _Decentralized level_ specified on the WebApp (_incoming_). <br>
 
 Quick list of routes:
 - Remove node
 - Create node
-- Add peer
+- Add a peer
 - Get Node infos
 
 Once the blockchain node is started, people can access the hosted blockchain through its IP/Port, allowing interaction with wallet providers (through RPC, e.g: Metamask, Web3).
 
 ## Configuration
 
-The Node is pre-configured with an authentification key to the skills server and a config file that disable some of routes based on _Decentralised level_. This configuration is done on the web app through an intuitive ui.
+The Node is pre-configured with an authentication key to the SkillZ server and a config file that disables some of routes based on _Decentralised level_. This configuration is done on the web app through an intuitive ui.
 
-For developers, the Node has a `config.js` file that allows a you to configure his Node on the go (before it started once, in case not, the user has to recreate a new one and delete the old one)
+For developers, the Node has a `config.js` file that allows you to configure the Node on the go (before it started once, in case not, the user has to recreate a new one and delete the old one)

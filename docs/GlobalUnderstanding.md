@@ -25,8 +25,8 @@ When you join a consortium, it will connect to already participating people and 
 
 The _Node_ is running in a Docker container, so you will need this dependency on your machine in order to be able to run it.
 
-## Supported protocol
+## Supported protocols
 
-Currently we support these protocol:
+We currently support these protocols:
 - Ethereum private (geth)
 - Ethereum public (geth)
