@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>SkillZ server · BaaS Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The server have mutiple roles, we can split them in two categories. The blockchain related category and the platform related category."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="SkillZ server · BaaS Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://skillz-blockchain.github.io/baas_docs/"/><meta property="og:description" content="The server have mutiple roles, we can split them in two categories. The blockchain related category and the platform related category."/><meta property="og:image" content="https://skillz-blockchain.github.io/baas_docs/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://skillz-blockchain.github.io/baas_docs/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/baas_docs/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/baas_docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/baas_docs/css/main.css"/><script src="/baas_docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/baas_docs/"><img class="logo" src="/baas_docs/img/baas.png" alt="BaaS Documentation"/><h2 class="headerTitleWithLogo">BaaS Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/baas_docs/docs/global_understanding" target="_self">Docs</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Deep architecture explanation</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Global understanding</h3><ul class=""><li class="navListItem"><a class="navItem" href="/baas_docs/docs/global_understanding">Global understanding</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">How it works</h3><ul class=""><li class="navListItem"><a class="navItem" href="/baas_docs/docs/consortium">Consortium</a></li><li class="navListItem"><a class="navItem" href="/baas_docs/docs/node">Node</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Deep architecture explanation</h3><ul class=""><li class="navListItem"><a class="navItem" href="/baas_docs/docs/deep_introduction">Introduction</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/baas_docs/docs/server">Server</a></li><li class="navListItem"><a class="navItem" href="/baas_docs/docs/node_deep">Node</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">SkillZ server</h1></header><article><div><span><p>The server have mutiple roles, we can split them in two categories. The blockchain related category and the platform related category.</p>
+<h1><a class="anchor" aria-hidden="true" id="account-and-consortium-managment"></a><a href="#account-and-consortium-managment" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Account and consortium managment</h1>
+<p>The server have a sign in / sign up management. It also optionally stores clouds credentials for fast and easy one click deployment.</p>
+<p><em>Quick reminder: A consortium is a group of people that want to share a blockchain with their own nodes</em></p>
+<p>The server manages consortiums. It can create one and manage user invitations. It's is in charge of the security of the differents users rights in a consortium.</p>
+<h1><a class="anchor" aria-hidden="true" id="blockchain-related"></a><a href="#blockchain-related" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Blockchain related</h1>
+<p>The server keep the nodes synchronized and can interacts with them.</p>
+<p>To make the node interactive front-end and keep nodes synchronized the SkillZ server can:</p>
+<ul>
+<li>Start a node</li>
+<li>Stop a node</li>
+<li>Adding peers to the node</li>
+<li>Removing the node (only clears blockchain data)</li>
+</ul>
+<p>The server provides a download link to a custom preconfigured Node based on your front-end selection. This download link shouldn't be shared with untrusted parties, it contains a key to authenticate your Node through our network. The download link expires once used.</p>
+<h3><a class="anchor" aria-hidden="true" id="node-bootstraping"></a><a href="#node-bootstraping" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Node bootstraping</h3>
+<p>There are two ways of bootstrapping nodes in blockchain:</p>
+<ul>
+<li>One node whose role is only to provide other node(s) network informations</li>
+<li>One server knowing each node network informations</li>
+</ul>
+<p>We chose to provide the second way of bootstrapping. Thus, we do not have a node interacting with the client's consortium and by definition not access to your data. The bootstrapping is then easily explained:</p>
+<ul>
+<li>The Node starts on the client server with a good configuration (TCP ports open, internet access)</li>
+<li>The Node registers to SkillZ server (with a key provided in the package the user launches)</li>
+<li>When added to a consortium, the Node receives by the SkillZ server a list of nodes already existing on the consortium (none if this Node is the first of the consortium)</li>
+<li>The Node now knows the consortium peers, in order to synchronize the blockchain with them.</li>
+<li>Once the node knows every peer of the network, the blockchain is synchronized</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="decentralised-level-incoming"></a><a href="#decentralised-level-incoming" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Decentralised level (incoming)</h3>
+<p>In order to fulfill the decentralized requirements you need, we introduce you the <strong>decentralized level</strong>.</p>
+<p>The decentralised level represents how much SkillZ can interact with a node.</p>
+<p>A Node with a low decentralised level will provide a friendly and useful user interface.
+On the contrary, with a high decentralised level, a lot of webapp features will be disabled such as blockchain explorer, node management and skillz won't have any access to your node except for starting it and give it mandatory informations to start.</p>
+<blockquote>
+<p>The following table shows wether or not a functionnality is available through the Webapp, depending on the <em>Decentralised</em> level chosen by the client</p>
+</blockquote>
+<table>
+<thead>
+<tr><th style="text-align:right">Decentralised Level</th><th style="text-align:center">Starting node</th><th style="text-align:center">Stopping node</th><th style="text-align:center">Adding peers</th><th style="text-align:center">Blockchain infos (RPC, Peers)</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:right">1</td><td style="text-align:center">X</td><td style="text-align:center">X</td><td style="text-align:center">X</td><td style="text-align:center">X</td></tr>
+<tr><td style="text-align:right">2</td><td style="text-align:center">X</td><td style="text-align:center"></td><td style="text-align:center">X</td><td style="text-align:center">X</td></tr>
+<tr><td style="text-align:right">3</td><td style="text-align:center">X</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/baas_docs/docs/deep_introduction"><span class="arrow-prev">← </span><span>Introduction</span></a><a class="docs-next button" href="/baas_docs/docs/node_deep"><span>Node</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/baas_docs/" class="nav-home"><img src="/baas_docs/img/baas.png" alt="BaaS Documentation" width="66" height="58"/></a><div><h5>Docs</h5><a href="/baas_docs/docs/global_understanding.html">Global understanding</a><a href="/baas_docs/docs/consortium.html">How it works</a><a href="/baas_docs/docs/deep_introduction.html">Deep architecture explanation</a></div><div><h5>Website</h5><a href="https://baas.tech">BaaS</a><a href="https://skillz.io">SkillZ</a></div><div><h5>More</h5><a href="https://linkedin.com/company/skillz-blockchain/">Linkdin</a><a href="https://github.com/skillz-blockchain">GitHub</a></div></section><section class="copyright">Copyright © 2019 SkillZ</section></footer></div></body></html>
