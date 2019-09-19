@@ -140,13 +140,13 @@ class Index extends React.Component {
         {[
           {
             content: 'Create a powerful, multi-cloud node, that can be managed from a SaaS platform<br />Fast to deploy, lightweight and intelligent',
-            image: `${baseUrl}img/undraw_react.svg`,
+            image: `${baseUrl}img/node-view.png`,
             imageAlign: 'top',
             title: 'Node',
           },
           {
             content: 'Create consortiums to allow the sharing of a blockchain privately. Invite new people that can interact through their own node',
-            image: `${baseUrl}img/undraw_operating_system.svg`,
+            image: `${baseUrl}img/consortium.png`,
             imageAlign: 'top',
             title: 'Consortium',
           },
