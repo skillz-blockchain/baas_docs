@@ -37,19 +37,18 @@ class Footer extends React.Component {
           </a>
           <div>
             <h5>Docs</h5>
-            <a href={this.docUrl('global_understanding.html', this.props.language)}>
+            <a href={this.docUrl('global_understanding.html')}>
               Getting Started (or other categories)
             </a>
           </div>
           <div>
-            <h5>Community</h5>
-            <a href="https://youtu.be/U4z3r5-s5xc">
-              Youtube
-            </a>
+            <h5>Website</h5>
+            <a href="https://baas.tech">BaaS</a>
+            <a href="https://skillz.io">SkillZ</a>
           </div>
           <div>
             <h5>More</h5>
-            <a href={`${this.props.config.baseUrl}blog`}>Blog</a>
+            <a href="https://linkedin.com/company/skillz-blockchain/">Linkdin</a>
             <a href="https://github.com/skillz-blockchain">GitHub</a>
           </div>
         </section>

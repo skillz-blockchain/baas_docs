@@ -1,6 +1,7 @@
 {
   "docs": {
     "Global understanding": ["global_understanding"],
-    "How it works": ["consortium", "node"]
+    "How it works": ["consortium", "node"],
+    "Deep architecture explanation": ["deep_introduction", "server", "node_deep"]
   }
 }

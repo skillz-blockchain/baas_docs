@@ -12,15 +12,27 @@
         "title": "Consortium",
         "sidebar_label": "Consortium"
       },
+      "deep_introduction": {
+        "title": "In depth introduction",
+        "sidebar_label": "Introduction"
+      },
       "doc5": {
         "title": "Fifth Document"
       },
       "global_understanding": {
         "title": "Global understanding"
       },
+      "node_deep": {
+        "title": "Node",
+        "sidebar_label": "Node"
+      },
       "node": {
         "title": "Node",
         "sidebar_label": "Node"
+      },
+      "server": {
+        "title": "SkillZ server",
+        "sidebar_label": "Server"
       }
     },
     "links": {
@@ -28,7 +40,8 @@
     },
     "categories": {
       "Global understanding": "Global understanding",
-      "How it works": "How it works"
+      "How it works": "How it works",
+      "Deep architecture explenation": "Deep architecture explenation"
     }
   },
   "pages-strings": {
