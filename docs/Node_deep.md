@@ -35,3 +35,17 @@ Once the blockchain node is started, people can access the hosted blockchain thr
 The Node is pre-configured with an authentication key to the SkillZ server and a config file that disables some of routes based on _Decentralised level_. This configuration is done on the web app through an intuitive ui.
 
 For developers, the Node has a `config.js` file that allows you to configure the Node on the go (before it started once, in case not, the user has to recreate a new one and delete the old one)
+
+## Integrate a new protocol
+
+To integrate a new protocol, the protocol must meet a set of requirments:
+- It must be possible to run it in a container
+- It must be handle with a startup configuration file and a simmilary set of function:
+    - init()
+    - start()
+    - stop()
+    - reset()
+    - getOwnPeer() -> Peer
+    - addPeer(Peer)
+    - getPeers() -> [Peer]
+- It must recover state if it have been stop then restart

@@ -195,14 +195,3 @@ class Index extends React.Component {
 }
 
 module.exports = Index;
-
-// skillz_rrCzilEEMYfcnqSkkZog
-// skillz_5FQ8Zb7a89ldURuBFtat
-// skillz_ntPMlfC7fg0haKmVPVqk
-// skillz_2YutQPE2dTArvmXzCt47
-// skillz_7Ok9Xlfwmu18lUyYsggO
-// skillz_fdFo8qtq5WLRx3sHelsZ
-// skillz_iOwxEALi0PP0zlq8I05h
-// skillz_f2VEPAN6qFP033EXbihp
-// skillz_52ZFgiqfID6JwKGHZty6
-// skillz_WaqeecGQrChu6x2cJbtz
