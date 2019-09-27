@@ -8,6 +8,10 @@
       "api": {
         "title": "API"
       },
+      "blockchainexplorer": {
+        "title": "Blockchain Explorer",
+        "sidebar_label": "Blockchain Explorer"
+      },
       "consortium": {
         "title": "Consortium",
         "sidebar_label": "Consortium"
