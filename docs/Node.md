@@ -44,7 +44,7 @@ Then just click the deploy button. The deployment takes about 2 minutes to achie
 
 To launch your node manually, you need to have access to a machine exposing the ports you specified when creating you node, by default those are:
 
-- 8081 (for SkillZ service)
+- 8001 (for SkillZ service)
 - 8545 (for blockchain RPC endpoint)
 - 30303 (for blockchain IPC endpoint)
 
